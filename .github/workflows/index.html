@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shriza Travels | Corporate & Luxury Vehicle Hire Kolkata</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            600: '#1e40af',
+                            700: '#1d4ed8',
+                            800: '#1e3a8a',
+                            900: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.92)), 
+                        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+        }
+        .vehicle-card img {
+            transition: transform 0.4s ease;
+        }
+        .vehicle-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- TOP BAR -->
+    <div class="bg-brand-900 text-slate-300 text-xs sm:text-sm py-2.5 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6 text-center sm:text-left">
+                <span><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i>Kasba, Kolkata - 700042</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-amber-400 mr-2"></i>Commercial Quotations FY 2026-2027</span>
+            </div>
+            <div class="flex items-center space-x-5">
+                <a href="tel:+919062199555" class="hover:text-amber-400 transition flex items-center">
+                    <i class="fa-solid fa-phone text-amber-400 mr-1.5"></i>+91 9062199555
+                </a>
+                <a href="mailto:shrizatravels@gmail.com" class="hover:text-amber-400 transition flex items-center">
+                    <i class="fa-solid fa-envelope text-amber-400 mr-1.5"></i>shrizatravels@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="#" class="flex items-center space-x-3">
+                    <div class="bg-brand-800 text-amber-400 p-3 rounded-xl shadow-lg">
+                        <i class="fa-solid fa-car-side text-2xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black tracking-wider text-brand-900 block leading-tight">SHRIZA TRAVELS</span>
+                        <span class="text-xs text-slate-500 font-medium tracking-wide">Kolkata Corporate & Outstation Travel</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex space-x-7 font-semibold text-slate-700 text-sm items-center">
+                    <a href="#services" class="hover:text-brand-700 transition">Services</a>
+                    <a href="#showcase" class="hover:text-brand-700 transition">Fleet Photos</a>
+                    <a href="#fleet" class="hover:text-brand-700 transition">Tariff Schedule</a>
+                    <a href="#calculator" class="hover:text-brand-700 transition">Fare Estimator</a>
+                    <a href="#terms" class="hover:text-brand-700 transition">Terms</a>
+                    <a href="#contact" class="hover:text-brand-700 transition">Contact</a>
+                </div>
+
+                <div class="hidden sm:flex items-center space-x-3">
+                    <a href="#calculator" class="bg-amber-500 hover:bg-amber-600 text-brand-900 font-bold px-4 py-2.5 rounded-lg shadow transition text-sm flex items-center">
+                        <i class="fa-solid fa-calculator mr-2"></i>Instant Quote
+                    </a>
+                    <a href="https://wa.me/919062199555?text=Hello%20Shriza%20Travels,%20I%20would%20like%20to%20inquire%20about%20vehicle%20rental" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-4 py-2.5 rounded-lg shadow transition text-sm flex items-center">
+                        <i class="fa-brands fa-whatsapp text-lg mr-1.5"></i>WhatsApp
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button type="button" onclick="toggleMobileMenu()" class="lg:hidden text-slate-700 hover:text-brand-700 text-2xl p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-100 border-t border-slate-200 px-6 py-5 space-y-3 font-semibold text-slate-700 text-sm">
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-1 hover:text-brand-700">Services</a>
+            <a href="#showcase" onclick="toggleMobileMenu()" class="block py-1 hover:text-brand-700">Fleet Photos</a>
+            <a href="#fleet" onclick="toggleMobileMenu()" class="block py-1 hover:text-brand-700">Tariff Schedule</a>
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-1 hover:text-brand-700">Fare Estimator</a>
+            <a href="#terms" onclick="toggleMobileMenu()" class="block py-1 hover:text-brand-700">Terms & Policies</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-1 hover:text-brand-700">Contact Us</a>
+            <div class="pt-3 border-t border-slate-200 flex flex-col gap-2">
+                <a href="tel:+919062199555" class="bg-brand-700 text-white text-center py-2.5 rounded-lg font-bold"><i class="fa-solid fa-phone mr-2"></i>Call +91 9062199555</a>
+                <a href="https://wa.me/919062199555" target="_blank" class="bg-emerald-600 text-white text-center py-2.5 rounded-lg font-bold"><i class="fa-brands fa-whatsapp mr-2"></i>WhatsApp Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg text-white py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto text-center">
+            <span class="inline-block bg-amber-500/20 text-amber-300 text-xs uppercase tracking-widest font-bold py-1.5 px-4 rounded-full border border-amber-500/30 mb-4">
+                Official Corporate Quotation FY 2026-27
+            </span>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto mb-6">
+                Premium Corporate & Event Mobility Solutions in Kolkata
+            </h1>
+            <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+                Executive sedans, luxury convertibles, SUVs, Tempo Travellers, and AC coaches for corporate travel, conferences, airport transfers, VIP delegations, and weddings.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <a href="#showcase" class="bg-amber-500 hover:bg-amber-600 text-brand-900 font-bold px-8 py-3.5 rounded-xl shadow-lg transition text-base">
+                    <i class="fa-solid fa-images mr-2"></i>View Fleet Photos
+                </a>
+                <a href="#calculator" class="bg-slate-800/80 hover:bg-slate-800 text-white border border-slate-700 font-semibold px-8 py-3.5 rounded-xl shadow-md transition text-base">
+                    <i class="fa-solid fa-calculator mr-2"></i>Estimate Rental Cost
+                </a>
+            </div>
+            <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto text-slate-300 text-xs sm:text-sm">
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-700/60"><i class="fa-solid fa-shield-check text-amber-400 mr-1.5"></i>Commercial Permits</div>
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-700/60"><i class="fa-solid fa-user-tie text-amber-400 mr-1.5"></i>Uniformed Chauffeurs</div>
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-700/60"><i class="fa-solid fa-file-invoice text-amber-400 mr-1.5"></i>GST Compliant Invoicing</div>
+                <div class="bg-slate-900/60 p-3 rounded-lg border border-slate-700/60"><i class="fa-solid fa-headset text-amber-400 mr-1.5"></i>24x7 Corporate Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES HIGHLIGHT -->
+    <section id="services" class="py-16 bg-white border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">What We Offer</span>
+                <h2 class="text-3xl font-bold text-brand-900 mt-1">Tailored Corporate Mobility</h2>
+                <p class="text-slate-600 mt-2 max-w-xl mx-auto text-sm sm:text-base">Comprehensive fleet support designed for enterprises, conferences, weddings, and executive delegations.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 text-2xl">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Corporate Travel</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Executive sedans and group transport for corporate delegates & employee movements.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 text-2xl">
+                        <i class="fa-solid fa-plane-departure"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Airport Transfers</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Punctual CCU airport & Howrah/Sealdah railway station pickup and drop.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 text-2xl">
+                        <i class="fa-solid fa-people-group"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Events & Summits</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Coordinated multi-vehicle fleets for business summits, expos, and VIP conventions.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 text-2xl">
+                        <i class="fa-solid fa-ring"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Weddings & VVIP</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Decorated luxury convertibles, sedans, and coaches for groom entry and wedding parties.</p>
+                </div>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-4 bg-brand-100 rounded-full flex items-center justify-center text-brand-700 text-2xl">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+                    <h3 class="font-bold text-slate-900 mb-2">Outstation Trips</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed">Multi-day tours to Digha, Mandarmani, Sundarbans, Siliguri, and across Bengal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VEHICLE PHOTO GALLERY SHOWCASE -->
+    <section id="showcase" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-amber-600 font-bold text-xs uppercase tracking-wider">Our Fleet Gallery</span>
+                <h2 class="text-3xl font-extrabold text-brand-900 mt-1">Explore Our Premium Vehicles</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Meticulously maintained, sanitized, chauffeur-driven luxury vehicles</p>
+                
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 mt-6">
+                    <button onclick="filterFleet('all')" class="filter-btn active bg-brand-800 text-white px-4 py-2 rounded-full text-xs font-semibold shadow transition">All Vehicles</button>
+                    <button onclick="filterFleet('luxury')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-xs font-semibold shadow-sm border border-slate-200 transition">Luxury & Sedans</button>
+                    <button onclick="filterFleet('suv')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-xs font-semibold shadow-sm border border-slate-200 transition">Premium SUVs</button>
+                    <button onclick="filterFleet('coach')" class="filter-btn bg-white hover:bg-slate-100 text-slate-700 px-4 py-2 rounded-full text-xs font-semibold shadow-sm border border-slate-200 transition">Coaches & Travellers</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Mercedes Convertible -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="luxury">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=800" alt="Mercedes Convertible" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-brand-900 font-bold text-xs px-3 py-1 rounded-full shadow">Cabriolet / Open Top</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹3,500 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Mercedes Convertible</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Ultimate luxury open-top cabriolet for celebrity entries, VIP receptions, and dream wedding shoots.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>4 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>2 Bags</div>
+                                <div><i class="fa-solid fa-snowflake text-brand-700 mb-1 block"></i>Dual AC</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹35,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('merc_conv')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. BMW 7 Series -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="luxury">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800" alt="BMW 7 Series" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">Flagship Luxury Sedan</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹3,000 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">BMW 7 Series</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Sophisticated flagship executive sedan offering massage seats, rear console entertainment, and silent ride.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>4 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>3 Bags</div>
+                                <div><i class="fa-solid fa-shield-halved text-brand-700 mb-1 block"></i>VIP Spec</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹30,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('bmw7')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Mercedes S Class -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="luxury">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=800" alt="Mercedes S Class" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">Executive Benchmark</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹3,000 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Mercedes S Class</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">World-renowned executive prestige car. Unrivalled rear cabin comfort designed for CEOs and global dignitaries.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>4 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>3 Bags</div>
+                                <div><i class="fa-solid fa-couch text-brand-700 mb-1 block"></i>First Class</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹30,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('merc_s')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Toyota Vellfire -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="luxury">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=800" alt="Toyota Vellfire" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-brand-900 font-bold text-xs px-3 py-1 rounded-full shadow">VIP Executive Lounge</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹3,000 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Toyota Vellfire</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Electric Ottoman captain seats with heating, chiller, and lounge space. Perfect for high-tier delegations.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>6-7 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>4 Bags</div>
+                                <div><i class="fa-solid fa-chair text-brand-700 mb-1 block"></i>Ottoman</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹30,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('vellfire')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Mercedes GLS -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="suv">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=800" alt="Mercedes GLS" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">Flagship 7-Seater SUV</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹2,500 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Mercedes GLS</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">The S-Class of luxury SUVs. Commanding road presence, air suspension, panoramic sunroof, and 7 seats.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>6-7 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>4 Bags</div>
+                                <div><i class="fa-solid fa-mountain text-brand-700 mb-1 block"></i>4x4 Air Ride</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹25,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('merc_gls')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Jaguar XF -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="luxury">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&q=80&w=800" alt="Jaguar XF" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">British Luxury Sport</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹2,500 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Jaguar XF</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Distinctive British elegance, handcrafted leather interiors, and smooth performance for VIP guests.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>4 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>3 Bags</div>
+                                <div><i class="fa-solid fa-music text-brand-700 mb-1 block"></i>Meridian Sound</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹25,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('jaguar')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Audi Q7 -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="suv">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?auto=format&fit=crop&q=80&w=800" alt="Audi Q7" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">Quattro Luxury SUV</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹2,500 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Audi Q7</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Spacious 7-seater Audi Quattro all-wheel drive SUV with matrix LED lamps and panoramic glass roof.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>6-7 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>4 Bags</div>
+                                <div><i class="fa-solid fa-car-side text-brand-700 mb-1 block"></i>Quattro AWD</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹25,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('q7')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. New Mercedes E Class (2024) -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="luxury">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=800" alt="New Mercedes E Class (2024)" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-brand-900 font-bold text-xs px-3 py-1 rounded-full shadow">2024 Edition</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹2,000 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">New Mercedes E Class (2024)</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Latest long-wheelbase business sedan with luxury recliner rear seats and wireless charging.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>4 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>3 Bags</div>
+                                <div><i class="fa-solid fa-shield text-brand-700 mb-1 block"></i>LWB Recliner</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹20,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('merc_e')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Audi A6 -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="luxury">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=800" alt="Audi A6" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">Executive Class</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹2,000 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Audi A6</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Sleek corporate executive sedan with premium acoustic glazing, matrix lighting, and dual MMI touch screens.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>4 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>3 Bags</div>
+                                <div><i class="fa-solid fa-volume-xmark text-brand-700 mb-1 block"></i>Silent Cabin</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹20,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('audi_a6')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Audi A4 / Toyota Camry -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="luxury">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800" alt="Audi A4 / Toyota Camry" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">Hybrid / Executive</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹2,000 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Audi A4 / Toyota Camry</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Supreme comfort executive travel with hybrid electric silence, rear sunshades, and ventilated seats.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>4 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>3 Bags</div>
+                                <div><i class="fa-solid fa-leaf text-brand-700 mb-1 block"></i>Eco Hybrid</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹20,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('audi_a4')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 11. Toyota Fortuner -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="suv">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=800" alt="Toyota Fortuner" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-amber-500 text-brand-900 font-bold text-xs px-3 py-1 rounded-full shadow">Popular Corporate SUV</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">₹700 / hr</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">Toyota Fortuner</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">High Demand</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Rugged 7-seater powerhouse with unmatched reliability for city commutes, site inspections, and convoy escort.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-user-group text-brand-700 mb-1 block"></i>6-7 Seater</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>4 Bags</div>
+                                <div><i class="fa-solid fa-road text-brand-700 mb-1 block"></i>All-Terrain</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Base (10h / 100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹7,000</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('fortuner')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 12. AC Large Luxury Coach -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="coach">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=800" alt="AC Large Luxury Coach" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">35 - 45 Seater</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">Transfer: ₹10,300</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">AC Large Luxury Coach</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">High-deck air-conditioned luxury coach with push-back seats, air suspension, PA audio, and massive luggage bays.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-users text-brand-700 mb-1 block"></i>35-45 Seats</div>
+                                <div><i class="fa-solid fa-boxes-stacked text-brand-700 mb-1 block"></i>Huge Boot</div>
+                                <div><i class="fa-solid fa-wifi text-brand-700 mb-1 block"></i>Mic & PA</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Disposal (10h/100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹15,500</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('coach_large')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 13. AC Tempo Traveller (26 Seater) -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="coach">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=800" alt="AC Tempo Traveller 26 Seater" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">26 Seater Coach</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">Transfer: ₹7,000</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">AC Tempo Traveller (26S)</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Spacious group cruiser with 2x2 pushback seating, powerful dual air-conditioning, and smooth highway handling.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-users text-brand-700 mb-1 block"></i>26 Passengers</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>15 Bags</div>
+                                <div><i class="fa-solid fa-snowflake text-brand-700 mb-1 block"></i>Dual AC</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Disposal (10h/100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹8,500</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('tt_26')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 14. AC Tempo Traveller (17 Seater) -->
+                <div class="vehicle-card bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 flex flex-col" data-category="coach">
+                    <div class="relative h-56 overflow-hidden bg-slate-900">
+                        <img src="https://images.unsplash.com/photo-1562920616-09e86488a032?auto=format&fit=crop&q=80&w=800" alt="AC Tempo Traveller 17 Seater" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-brand-800 text-white font-bold text-xs px-3 py-1 rounded-full shadow">17 Seater Executive</span>
+                        <span class="absolute bottom-3 right-3 bg-brand-900/90 text-white text-xs px-2.5 py-1 rounded-md backdrop-blur-sm">Transfer: ₹5,500</span>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2">
+                                <h3 class="text-lg font-bold text-slate-900">AC Tempo Traveller (17S)</h3>
+                                <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Available</span>
+                            </div>
+                            <p class="text-xs text-slate-500 mb-4">Compact executive group van ideal for airport delegate movements, corporate teams, and weekend family getaways.</p>
+                            <div class="grid grid-cols-3 gap-2 text-center text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4 border border-slate-100">
+                                <div><i class="fa-solid fa-users text-brand-700 mb-1 block"></i>17 Passengers</div>
+                                <div><i class="fa-solid fa-suitcase text-brand-700 mb-1 block"></i>10 Bags</div>
+                                <div><i class="fa-solid fa-tv text-brand-700 mb-1 block"></i>Music System</div>
+                            </div>
+                        </div>
+                        <div class="pt-3 border-t border-slate-100 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Disposal (10h/100km)</span>
+                                <span class="text-base font-bold text-brand-700">₹6,500</span>
+                            </div>
+                            <button onclick="selectVehicleForCalc('tt_17')" class="bg-brand-700 hover:bg-brand-800 text-white text-xs font-semibold px-4 py-2 rounded-lg transition shadow">Book Vehicle</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FLEET RATE SCHEDULE -->
+    <section id="fleet" class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Approved Tariffs</span>
+                <h2 class="text-3xl font-bold text-brand-900 mt-1">Vehicle Hire Rate Schedule (FY 2026-27)</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Transparent pricing for local disposal and transfer duties in Kolkata</p>
+            </div>
+
+            <!-- LUXURY CARS TABLE -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden mb-12 border border-slate-200">
+                <div class="bg-brand-900 text-white p-5 flex justify-between items-center flex-wrap gap-4">
+                    <h3 class="text-xl font-bold flex items-center"><i class="fa-solid fa-car text-amber-400 mr-3"></i>1. Executive & Premium Luxury Cars</h3>
+                    <span class="text-xs bg-amber-500/20 text-amber-300 font-semibold px-3 py-1.5 rounded-full border border-amber-500/30">Standard Base: 10 Hrs / 100 Km</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-700 uppercase text-xs tracking-wider border-b border-slate-200">
+                                <th class="p-4">Vehicle Model</th>
+                                <th class="p-4 text-right">Hourly Rate</th>
+                                <th class="p-4 text-right">Per Km Rate</th>
+                                <th class="p-4 text-right">Base Package (10h / 100km)</th>
+                                <th class="p-4 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-sm">
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Mercedes">
+                                    <span>Mercedes Convertible</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹3,500 / hr</td>
+                                <td class="p-4 text-right font-medium">₹350 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹35,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('merc_conv')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="BMW 7">
+                                    <span>BMW 7 Series</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹3,000 / hr</td>
+                                <td class="p-4 text-right font-medium">₹300 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹30,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('bmw7')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Mercedes S">
+                                    <span>Mercedes S Class</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹3,000 / hr</td>
+                                <td class="p-4 text-right font-medium">₹300 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹30,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('merc_s')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Vellfire">
+                                    <span>Toyota Vellfire (VIP Lounge)</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹3,000 / hr</td>
+                                <td class="p-4 text-right font-medium">₹300 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹30,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('vellfire')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="GLS">
+                                    <span>Mercedes GLS</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹2,500 / hr</td>
+                                <td class="p-4 text-right font-medium">₹250 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹25,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('merc_gls')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Jaguar">
+                                    <span>Jaguar XF</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹2,500 / hr</td>
+                                <td class="p-4 text-right font-medium">₹250 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹25,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('jaguar')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Audi Q7">
+                                    <span>Audi Q7</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹2,500 / hr</td>
+                                <td class="p-4 text-right font-medium">₹250 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹25,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('q7')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="E Class">
+                                    <span>New Mercedes E Class (2024)</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹2,000 / hr</td>
+                                <td class="p-4 text-right font-medium">₹200 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹20,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('merc_e')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Audi A6">
+                                    <span>Audi A6</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹2,000 / hr</td>
+                                <td class="p-4 text-right font-medium">₹200 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹20,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('audi_a6')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Camry">
+                                    <span>Audi A4 / Toyota Camry</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹2,000 / hr</td>
+                                <td class="p-4 text-right font-medium">₹200 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹20,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('audi_a4')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Fortuner">
+                                    <span>Toyota Fortuner</span>
+                                </td>
+                                <td class="p-4 text-right font-medium">₹700 / hr</td>
+                                <td class="p-4 text-right font-medium">₹70 / km</td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹7,000</td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('fortuner')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- COACHES & TEMPO TRAVELLER TABLE -->
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200">
+                <div class="bg-brand-900 text-white p-5 flex justify-between items-center flex-wrap gap-4">
+                    <h3 class="text-xl font-bold flex items-center"><i class="fa-solid fa-bus text-amber-400 mr-3"></i>2. AC Coaches & Tempo Travellers</h3>
+                    <span class="text-xs bg-amber-500/20 text-amber-300 font-semibold px-3 py-1.5 rounded-full border border-amber-500/30">Group Fleet & Delegates</span>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-700 uppercase text-xs tracking-wider border-b border-slate-200">
+                                <th class="p-4">Vehicle Category</th>
+                                <th class="p-4 text-right">Transfer Duty (Point-to-Point)</th>
+                                <th class="p-4 text-right">Disposal Duty (10 Hrs / 100 Km)</th>
+                                <th class="p-4 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 text-sm">
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="Coach">
+                                    <span>AC Large Luxury Coach (35-45 Seater)</span>
+                                </td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹10,300 <span class="text-xs font-normal text-slate-500">/ Trip</span></td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹15,500 <span class="text-xs font-normal text-slate-500">(10h / 100km)</span></td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('coach_large')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="TT 26">
+                                    <span>AC Tempo Traveller (26 Seater)</span>
+                                </td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹7,000 <span class="text-xs font-normal text-slate-500">/ Trip</span></td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹8,500 <span class="text-xs font-normal text-slate-500">(10h / 100km)</span></td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('tt_26')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition">
+                                <td class="p-4 font-semibold text-slate-900 flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1562920616-09e86488a032?auto=format&fit=crop&q=80&w=150" class="w-12 h-9 object-cover rounded shadow-sm shrink-0" alt="TT 17">
+                                    <span>AC Tempo Traveller (17 Seater)</span>
+                                </td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹5,500 <span class="text-xs font-normal text-slate-500">/ Trip</span></td>
+                                <td class="p-4 text-right font-bold text-brand-700">₹6,500 <span class="text-xs font-normal text-slate-500">(10h / 100km)</span></td>
+                                <td class="p-4 text-center">
+                                    <button onclick="selectVehicleForCalc('tt_17')" class="text-xs bg-brand-100 hover:bg-brand-200 text-brand-800 font-semibold px-3 py-1 rounded transition">Calculate</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE FARE ESTIMATOR CALCULATOR -->
+    <section id="calculator" class="py-16 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-amber-600 font-bold text-xs uppercase tracking-wider">Instant Quote</span>
+                <h2 class="text-3xl font-bold text-brand-900 mt-1">Instant Rental Cost Calculator</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Calculate transparent commercial quotes for local disposal or point transfer duty</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-xl">
+                
+                <!-- Dynamic Selected Vehicle Preview Banner -->
+                <div class="bg-slate-100 border border-slate-200 rounded-xl p-4 mb-6 flex flex-col sm:flex-row items-center gap-4">
+                    <img id="calcPreviewImg" src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=400" alt="Selected Vehicle Preview" class="w-32 h-20 object-cover rounded-lg shadow-sm border border-white shrink-0">
+                    <div class="text-center sm:text-left flex-1">
+                        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+                            <h4 id="calcPreviewName" class="text-lg font-bold text-slate-900">Mercedes Convertible</h4>
+                            <span id="calcPreviewBadge" class="text-xs bg-amber-100 text-amber-800 font-semibold px-2 py-0.5 rounded">4 Seater • Cabriolet</span>
+                        </div>
+                        <p id="calcPreviewRates" class="text-xs text-slate-500 mt-1">Hourly: ₹3,500/hr | Km: ₹350/km | Base (10h/100km): ₹35,000</p>
+                    </div>
+                </div>
+
+                <form id="calcForm" class="space-y-6">
+                    <!-- Vehicle Selection -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-800 mb-2">Select Vehicle</label>
+                        <select id="vehicle" onchange="handleVehicleChange()" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-700 focus:outline-none">
+                            <optgroup label="Executive & Luxury Cars (Disposal Min: 10h / 100km)">
+                                <option value="merc_conv" data-hr="3500" data-km="350" data-base="35000" data-type="car" data-img="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=400" data-badge="4 Seater • Cabriolet">Mercedes Convertible (₹3,500/hr | ₹350/km)</option>
+                                <option value="bmw7" data-hr="3000" data-km="300" data-base="30000" data-type="car" data-img="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=400" data-badge="4 Seater • Flagship Sedan">BMW 7 Series (₹3,000/hr | ₹300/km)</option>
+                                <option value="merc_s" data-hr="3000" data-km="300" data-base="30000" data-type="car" data-img="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=400" data-badge="4 Seater • VIP Benchmark">Mercedes S Class (₹3,000/hr | ₹300/km)</option>
+                                <option value="vellfire" data-hr="3000" data-km="300" data-base="30000" data-type="car" data-img="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=400" data-badge="6-7 Seater • Lounge MPV">Toyota Vellfire (₹3,000/hr | ₹300/km)</option>
+                                <option value="merc_gls" data-hr="2500" data-km="250" data-base="25000" data-type="car" data-img="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=400" data-badge="7 Seater • Luxury SUV">Mercedes GLS (₹2,500/hr | ₹250/km)</option>
+                                <option value="jaguar" data-hr="2500" data-km="250" data-base="25000" data-type="car" data-img="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?auto=format&fit=crop&q=80&w=400" data-badge="4 Seater • British Sport Sedan">Jaguar XF (₹2,500/hr | ₹250/km)</option>
+                                <option value="q7" data-hr="2500" data-km="250" data-base="25000" data-type="car" data-img="https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?auto=format&fit=crop&q=80&w=400" data-badge="7 Seater • Quattro SUV">Audi Q7 (₹2,500/hr | ₹250/km)</option>
+                                <option value="merc_e" data-hr="2000" data-km="200" data-base="20000" data-type="car" data-img="https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=400" data-badge="4 Seater • 2024 Edition">New Mercedes E Class [2024] (₹2,000/hr | ₹200/km)</option>
+                                <option value="audi_a6" data-hr="2000" data-km="200" data-base="20000" data-type="car" data-img="https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=400" data-badge="4 Seater • Executive Sedan">Audi A6 (₹2,000/hr | ₹200/km)</option>
+                                <option value="audi_a4" data-hr="2000" data-km="200" data-base="20000" data-type="car" data-img="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=400" data-badge="4 Seater • Luxury Sedan">Audi A4 / Toyota Camry (₹2,000/hr | ₹200/km)</option>
+                                <option value="fortuner" data-hr="700" data-km="70" data-base="7000" data-type="car" data-img="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=400" data-badge="7 Seater • Corporate 4x4">Toyota Fortuner (₹700/hr | ₹70/km)</option>
+                            </optgroup>
+                            <optgroup label="AC Coaches & Tempo Travellers">
+                                <option value="coach_large" data-transfer="10300" data-disposal="15500" data-type="bus" data-img="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&q=80&w=400" data-badge="35-45 Seater • Luxury Coach">AC Large Coach (Transfer: ₹10,300 | Disposal: ₹15,500)</option>
+                                <option value="tt_26" data-transfer="7000" data-disposal="8500" data-type="bus" data-img="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&q=80&w=400" data-badge="26 Seater • Group Traveller">AC Tempo Traveller 26 Seater (Transfer: ₹7,000 | Disposal: ₹8,500)</option>
+                                <option value="tt_17" data-transfer="5500" data-disposal="6500" data-type="bus" data-img="https://images.unsplash.com/photo-1562920616-09e86488a032?auto=format&fit=crop&q=80&w=400" data-badge="17 Seater • Executive Van">AC Tempo Traveller 17 Seater (Transfer: ₹5,500 | Disposal: ₹6,500)</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Duty Type -->
+                    <div>
+                        <label class="block text-sm font-bold text-slate-800 mb-2">Duty Type</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <label class="flex items-center p-3.5 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition bg-white">
+                                <input type="radio" name="dutyType" id="dutyDisposal" value="disposal" checked onchange="handleDutyChange()" class="h-4 w-4 text-brand-700 focus:ring-brand-700">
+                                <span class="ml-3 text-sm font-semibold text-slate-800">
+                                    Local Disposal <span class="text-xs block font-normal text-slate-500">Min 10 Hrs / 100 Km base package</span>
+                                </span>
+                            </label>
+                            <label id="transferOptionWrap" class="flex items-center p-3.5 border border-slate-300 rounded-lg cursor-pointer hover:bg-slate-50 transition bg-white">
+                                <input type="radio" name="dutyType" id="dutyTransfer" value="transfer" onchange="handleDutyChange()" class="h-4 w-4 text-brand-700 focus:ring-brand-700">
+                                <span class="ml-3 text-sm font-semibold text-slate-800">
+                                    Point-to-Point / Transfer <span class="text-xs block font-normal text-slate-500">Airport or Hotel one-way drop</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Hours & Km Inputs (for Local Disposal) -->
+                    <div id="disposalInputs" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-sm font-bold text-slate-800">Duration (Hours)</label>
+                                <span class="text-xs text-slate-500">Min. 10 hours</span>
+                            </div>
+                            <div class="relative">
+                                <input type="number" id="inputHours" value="10" min="10" max="72" oninput="calculateFare()" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-700 focus:outline-none">
+                                <span class="absolute right-3 top-3 text-xs text-slate-400 font-semibold">HRS</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-sm font-bold text-slate-800">Distance (Kilometers)</label>
+                                <span class="text-xs text-slate-500">Min. 100 km</span>
+                            </div>
+                            <div class="relative">
+                                <input type="number" id="inputKm" value="100" min="100" max="1500" oninput="calculateFare()" class="w-full bg-white border border-slate-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-brand-700 focus:outline-none">
+                                <span class="absolute right-3 top-3 text-xs text-slate-400 font-semibold">KM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Optional Night Allowance Check -->
+                    <div class="pt-1">
+                        <label class="inline-flex items-center text-sm font-medium text-slate-700 cursor-pointer">
+                            <input type="checkbox" id="nightDuty" onchange="calculateFare()" class="rounded border-slate-300 text-brand-700 focus:ring-brand-700 h-4 w-4">
+                            <span class="ml-2">Duty extends between 10:00 PM and 6:00 AM (+₹500 Night Allowance)</span>
+                        </label>
+                    </div>
+
+                    <!-- Output Summary Box -->
+                    <div class="bg-brand-900 text-white p-6 rounded-xl shadow-inner">
+                        <div class="flex justify-between items-center border-b border-slate-700 pb-3 mb-4">
+                            <span class="text-xs uppercase tracking-wider text-amber-400 font-bold">Estimated Commercial Quotation</span>
+                            <span id="summaryBadge" class="bg-amber-500/20 text-amber-300 text-xs px-2.5 py-0.5 rounded border border-amber-500/30">Local Disposal (10h/100km)</span>
+                        </div>
+                        
+                        <div class="space-y-2 text-sm text-slate-300">
+                            <div class="flex justify-between">
+                                <span>Base Package Charge:</span>
+                                <span id="outBase" class="font-semibold text-white">₹35,000</span>
+                            </div>
+                            <div id="rowExtraHr" class="flex justify-between">
+                                <span>Extra Hours Charge (<span id="outExtraHrQty">0</span> hrs):</span>
+                                <span id="outExtraHr" class="font-semibold text-white">₹0</span>
+                            </div>
+                            <div id="rowExtraKm" class="flex justify-between">
+                                <span>Extra Distance Charge (<span id="outExtraKmQty">0</span> km):</span>
+                                <span id="outExtraKm" class="font-semibold text-white">₹0</span>
+                            </div>
+                            <div id="rowNight" class="flex justify-between hidden">
+                                <span>Night Driver Allowance:</span>
+                                <span id="outNight" class="font-semibold text-white">₹500</span>
+                            </div>
+                            <div class="flex justify-between border-t border-slate-800 pt-2 text-slate-400 text-xs">
+                                <span>Toll / Parking / State Tax:</span>
+                                <span>Actuals as per slips</span>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-slate-700 mt-4 pt-4 flex flex-col sm:flex-row justify-between sm:items-center gap-3">
+                            <div>
+                                <span class="text-xs text-slate-400 block">Total Estimated Base (Excl. Tolls & GST)</span>
+                                <span id="outTotal" class="text-3xl font-extrabold text-amber-400">₹35,000</span>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-2">
+                                <a id="btnWhatsAppQuote" href="#" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-lg text-xs sm:text-sm text-center shadow transition flex items-center justify-center">
+                                    <i class="fa-brands fa-whatsapp text-base mr-2"></i>Send Quote to WhatsApp
+                                </a>
+                                <a href="tel:+919062199555" class="bg-brand-700 hover:bg-brand-800 text-white font-bold px-4 py-2.5 rounded-lg text-xs sm:text-sm text-center shadow transition flex items-center justify-center">
+                                    <i class="fa-solid fa-phone mr-2"></i>Call Desk
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- TERMS & COMMERCIAL CONDITIONS -->
+    <section id="terms" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Compliance & Guidelines</span>
+                <h2 class="text-3xl font-bold text-brand-900 mt-1">Standard Commercial Terms & Conditions</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Transparent operational guidelines adhering to West Bengal Transport Authority standards</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fa-solid fa-gauge-high text-brand-700 text-xl"></i>
+                        <h4 class="font-bold text-slate-900">1. Garage-to-Garage Metering</h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Total time and kilometers are computed strictly from garage departure to garage return (Kasba base), or as agreed mutually for point-to-point transfers.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fa-solid fa-receipt text-brand-700 text-xl"></i>
+                        <h4 class="font-bold text-slate-900">2. Toll, Parking & Taxes</h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Airport entry charges, flyover tolls, municipal parking, and interstate border entry taxes are charged at actuals against physical or digital receipts.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fa-solid fa-moon text-brand-700 text-xl"></i>
+                        <h4 class="font-bold text-slate-900">3. Night & Driver Allowance</h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Duties between 10:00 PM and 6:00 AM incur a standard driver night allowance of ₹500. Outstation multi-day trips include daily driver allowance.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fa-solid fa-file-invoice-dollar text-brand-700 text-xl"></i>
+                        <h4 class="font-bold text-slate-900">4. GST & Billing</h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Applicable Goods and Services Tax (GST 5% without ITC or 12% with ITC) is billed extra as mandated by government taxation norms.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fa-solid fa-calendar-check text-brand-700 text-xl"></i>
+                        <h4 class="font-bold text-slate-900">5. Advance Booking & Deposit</h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        Confirmed bookings require a 30% advance deposit. Peak wedding and conference dates require 50% advance for guaranteed vehicle allotment.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <i class="fa-solid fa-shield-virus text-brand-700 text-xl"></i>
+                        <h4 class="font-bold text-slate-900">6. Vehicle Standards & Hygiene</h4>
+                    </div>
+                    <p class="text-xs text-slate-600 leading-relaxed">
+                        All vehicles are thoroughly sanitized, verified for fitness/pollution/insurance, and piloted by verified, polite, and uniformed chauffeurs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & BOOKING FORM -->
+    <section id="contact" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Info Left -->
+                <div>
+                    <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Get In Touch</span>
+                    <h2 class="text-3xl font-extrabold text-brand-900 mt-1">Reserve Your Fleet in Kolkata Today</h2>
+                    <p class="text-slate-600 mt-3 text-sm sm:text-base leading-relaxed">
+                        Our corporate travel specialists are available 24/7 to provide customized long-term lease quotations, VIP escort vehicles, or spot bookings.
+                    </p>
+
+                    <div class="mt-8 space-y-5 text-sm">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Registered Office</h4>
+                                <p class="text-slate-600 text-xs mt-0.5">Kasba, Kolkata, West Bengal - 700042, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Central Dispatch & Bookings</h4>
+                                <p class="text-slate-600 text-xs mt-0.5"><a href="tel:+919062199555" class="hover:text-brand-700 font-medium">+91 9062199555</a> (24x7 Priority Line)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-700 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Corporate Billing & Inquiry</h4>
+                                <p class="text-slate-600 text-xs mt-0.5"><a href="mailto:shrizatravels@gmail.com" class="hover:text-brand-700 font-medium">shrizatravels@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-5 bg-amber-50 rounded-xl border border-amber-200">
+                        <p class="text-xs text-amber-900 font-medium leading-relaxed">
+                            <i class="fa-solid fa-circle-info text-amber-600 mr-1.5"></i>
+                            <strong>Need custom monthly employee commute contracts?</strong> Ask for our corporate transport desk for dedicated executive vehicles and monthly tax invoices.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Inquiry Form Right -->
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-xl font-bold text-brand-900 mb-2">Direct Booking Inquiry</h3>
+                    <p class="text-xs text-slate-500 mb-6">Fill in your requirements below for an instant response from our dispatch coordinator.</p>
+                    <form onsubmit="handleInquirySubmit(event)" class="space-y-4 text-sm">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Your Name / Organization *</label>
+                                <input type="text" id="inqName" required placeholder="e.g. Rahul Sen / TCS Ltd" class="w-full bg-white border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-700 focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
+                                <input type="tel" id="inqPhone" required placeholder="+91 98765 43210" class="w-full bg-white border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-700 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Vehicle</label>
+                                <select id="inqVehicle" class="w-full bg-white border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-700 focus:outline-none">
+                                    <option>Mercedes Convertible (Cabriolet)</option>
+                                    <option>Mercedes S Class / BMW 7 Series</option>
+                                    <option>Toyota Vellfire Lounge</option>
+                                    <option>Audi Q7 / Mercedes GLS</option>
+                                    <option>Mercedes E Class / Audi A6</option>
+                                    <option>Toyota Fortuner</option>
+                                    <option>AC Large Coach (35-45 Seater)</option>
+                                    <option>AC Tempo Traveller (17/26 Seater)</option>
+                                    <option>Multiple Vehicles (Corporate Event)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Travel Date</label>
+                                <input type="date" id="inqDate" class="w-full bg-white border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-700 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Trip Details & Route Notes</label>
+                            <textarea id="inqNotes" rows="3" placeholder="Pickup location, destination, estimated hours, or any special requirements..." class="w-full bg-white border border-slate-300 rounded-lg p-2.5 focus:ring-2 focus:ring-brand-700 focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-bold py-3 rounded-lg shadow-md transition flex items-center justify-center">
+                            <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>Submit Inquiry via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-900 text-slate-400 text-xs py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-brand-800 text-amber-400 p-2 rounded-lg">
+                        <i class="fa-solid fa-car-side text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-white font-bold text-base tracking-wide">SHRIZA TRAVELS</span>
+                        <span class="block text-slate-400">Kasba, Kolkata - 700042, West Bengal</span>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 font-medium text-slate-300">
+                    <a href="#services" class="hover:text-white transition">Services</a>
+                    <a href="#showcase" class="hover:text-white transition">Fleet Photos</a>
+                    <a href="#fleet" class="hover:text-white transition">Tariff Schedule</a>
+                    <a href="#calculator" class="hover:text-white transition">Fare Calculator</a>
+                    <a href="#terms" class="hover:text-white transition">Commercial Terms</a>
+                    <a href="tel:+919062199555" class="hover:text-white transition">+91 9062199555</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2">
+                <p>&copy; 2026 Shriza Travels. All rights reserved. Registered Commercial Transporter, Kolkata.</p>
+                <p class="text-slate-500">Official Commercial Tariff Schedule FY 2026-2027.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Fleet Gallery Category Filter
+        function filterFleet(category) {
+            const cards = document.querySelectorAll('.vehicle-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-800', 'text-white');
+                btn.classList.add('bg-white', 'text-slate-700');
+            });
+            event.target.classList.remove('bg-white', 'text-slate-700');
+            event.target.classList.add('bg-brand-800', 'text-white');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Handle quick calculate click from fleet table / card
+        function selectVehicleForCalc(vehicleVal) {
+            const vehicleSelect = document.getElementById('vehicle');
+            vehicleSelect.value = vehicleVal;
+            handleVehicleChange();
+            // Smooth scroll to calculator
+            document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Handle vehicle selection change
+        function handleVehicleChange() {
+            const vehicleSelect = document.getElementById('vehicle');
+            const selectedOption = vehicleSelect.options[vehicleSelect.selectedIndex];
+            const type = selectedOption.getAttribute('data-type');
+            const img = selectedOption.getAttribute('data-img');
+            const badge = selectedOption.getAttribute('data-badge');
+            const vehicleName = selectedOption.text.split('(')[0].trim();
+            const transferWrap = document.getElementById('transferOptionWrap');
+
+            // Update live preview in calculator
+            if (img) document.getElementById('calcPreviewImg').src = img;
+            document.getElementById('calcPreviewName').innerText = vehicleName;
+            if (badge) document.getElementById('calcPreviewBadge').innerText = badge;
+
+            if (type === 'bus') {
+                const trans = selectedOption.getAttribute('data-transfer');
+                const disp = selectedOption.getAttribute('data-disposal');
+                document.getElementById('calcPreviewRates').innerText = `Transfer: ₹${parseFloat(trans).toLocaleString('en-IN')} | Disposal (10h/100km): ₹${parseFloat(disp).toLocaleString('en-IN')}`;
+                transferWrap.classList.remove('opacity-40', 'pointer-events-none');
+            } else {
+                const hr = selectedOption.getAttribute('data-hr');
+                const km = selectedOption.getAttribute('data-km');
+                const base = selectedOption.getAttribute('data-base');
+                document.getElementById('calcPreviewRates').innerText = `Hourly: ₹${parseFloat(hr).toLocaleString('en-IN')}/hr | Km: ₹${parseFloat(km).toLocaleString('en-IN')}/km | Base (10h/100km): ₹${parseFloat(base).toLocaleString('en-IN')}`;
+                // Luxury car defaults to disposal
+                document.getElementById('dutyDisposal').checked = true;
+                handleDutyChange();
+            }
+            calculateFare();
+        }
+
+        // Handle Duty Type Change (Disposal vs Transfer)
+        function handleDutyChange() {
+            const isDisposal = document.getElementById('dutyDisposal').checked;
+            const disposalInputs = document.getElementById('disposalInputs');
+            const rowExtraHr = document.getElementById('rowExtraHr');
+            const rowExtraKm = document.getElementById('rowExtraKm');
+
+            if (isDisposal) {
+                disposalInputs.classList.remove('hidden');
+                rowExtraHr.classList.remove('hidden');
+                rowExtraKm.classList.remove('hidden');
+            } else {
+                disposalInputs.classList.add('hidden');
+                rowExtraHr.classList.add('hidden');
+                rowExtraKm.classList.add('hidden');
+            }
+            calculateFare();
+        }
+
+        // Core Fare Calculation Function
+        function calculateFare() {
+            const vehicleSelect = document.getElementById('vehicle');
+            const selectedOption = vehicleSelect.options[vehicleSelect.selectedIndex];
+            const vehicleName = selectedOption.text.split('(')[0].trim();
+            const type = selectedOption.getAttribute('data-type');
+            const isDisposal = document.getElementById('dutyDisposal').checked;
+            const hasNight = document.getElementById('nightDuty').checked;
+            const nightFee = hasNight ? 500 : 0;
+
+            const rowNight = document.getElementById('rowNight');
+            if (hasNight) {
+                rowNight.classList.remove('hidden');
+            } else {
+                rowNight.classList.add('hidden');
+            }
+
+            let baseFare = 0;
+            let extraHrFare = 0;
+            let extraKmFare = 0;
+            let total = 0;
+            let dutyLabel = "";
+
+            if (type === 'car') {
+                dutyLabel = "Local Disposal";
+                const basePackage = parseFloat(selectedOption.getAttribute('data-base')) || 0;
+                const perHr = parseFloat(selectedOption.getAttribute('data-hr')) || 0;
+                const perKm = parseFloat(selectedOption.getAttribute('data-km')) || 0;
+
+                const hrs = Math.max(10, parseFloat(document.getElementById('inputHours').value) || 10);
+                const km = Math.max(100, parseFloat(document.getElementById('inputKm').value) || 100);
+
+                const extraHrs = Math.max(0, hrs - 10);
+                const extraKms = Math.max(0, km - 100);
+
+                baseFare = basePackage;
+                extraHrFare = extraHrs * perHr;
+                extraKmFare = extraKms * perKm;
+
+                document.getElementById('outExtraHrQty').innerText = extraHrs;
+                document.getElementById('outExtraKmQty').innerText = extraKms;
+                total = baseFare + extraHrFare + extraKmFare + nightFee;
+
+                document.getElementById('summaryBadge').innerText = `Car Disposal (${hrs}h / ${km}km)`;
+            } else {
+                // Coach or Tempo Traveller
+                if (isDisposal) {
+                    dutyLabel = "Disposal Duty (10h / 100km)";
+                    baseFare = parseFloat(selectedOption.getAttribute('data-disposal')) || 0;
+                    document.getElementById('outExtraHrQty').innerText = "0";
+                    document.getElementById('outExtraKmQty').innerText = "0";
+                    total = baseFare + nightFee;
+                    document.getElementById('summaryBadge').innerText = "Coach Disposal (10h / 100km)";
+                } else {
+                    dutyLabel = "Point Transfer Duty";
+                    baseFare = parseFloat(selectedOption.getAttribute('data-transfer')) || 0;
+                    total = baseFare + nightFee;
+                    document.getElementById('summaryBadge').innerText = "Point-to-Point Transfer";
+                }
+            }
+
+            // Update UI
+            document.getElementById('outBase').innerText = '₹' + baseFare.toLocaleString('en-IN');
+            document.getElementById('outExtraHr').innerText = '₹' + extraHrFare.toLocaleString('en-IN');
+            document.getElementById('outExtraKm').innerText = '₹' + extraKmFare.toLocaleString('en-IN');
+            document.getElementById('outTotal').innerText = '₹' + total.toLocaleString('en-IN');
+
+            // Format WhatsApp Link
+            const waText = `Hello Shriza Travels, I would like to get a quote:%0A%0A` +
+                           `• *Vehicle:* ${vehicleName}%0A` +
+                           `• *Duty:* ${dutyLabel}%0A` +
+                           (type === 'car' ? `• *Hours:* ${document.getElementById('inputHours').value} hrs%0A• *Distance:* ${document.getElementById('inputKm').value} km%0A` : '') +
+                           (hasNight ? `• *Night Duty:* Yes (+₹500)%0A` : '') +
+                           `• *Estimated Total Base:* ₹${total.toLocaleString('en-IN')}%0A%0APlease confirm availability.`;
+
+            document.getElementById('btnWhatsAppQuote').href = `https://wa.me/919062199555?text=${waText}`;
+        }
+
+        // Direct booking inquiry submission via WhatsApp
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('inqName').value;
+            const phone = document.getElementById('inqPhone').value;
+            const vehicle = document.getElementById('inqVehicle').value;
+            const date = document.getElementById('inqDate').value || 'To be decided';
+            const notes = document.getElementById('inqNotes').value || 'None';
+
+            const message = `*New Booking Inquiry - Shriza Travels*%0A%0A` +
+                            `• *Client Name:* ${name}%0A` +
+                            `• *Contact Number:* ${phone}%0A` +
+                            `• *Vehicle Preferred:* ${vehicle}%0A` +
+                            `• *Date of Travel:* ${date}%0A` +
+                            `• *Notes:* ${notes}%0A%0APlease share availability and finalized quotation.`;
+
+            window.open(`https://wa.me/919062199555?text=${message}`, '_blank');
+        }
+
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', () => {
+            handleVehicleChange();
+        });
+    </script>
+</body>
+</html>
